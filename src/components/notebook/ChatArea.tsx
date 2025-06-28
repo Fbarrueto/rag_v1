@@ -159,9 +159,9 @@ const ChatArea = ({
   const getPlaceholderText = () => {
     if (isChatDisabled) {
       if (sourceCount === 0) {
-        return "Upload a source to get started...";
+        return "Añade una fuente para emperzar...";
       } else {
-        return "Please wait while your sources are being processed...";
+        return "Porfavor espera mientras las fuentes estan siendo procesadas ...";
       }
     }
     return "Start typing...";
@@ -285,7 +285,7 @@ const ChatArea = ({
             <h2 className="text-xl font-medium text-gray-900 mb-4">Añade una fuente para emperzar</h2>
             <Button onClick={() => setShowAddSourcesDialog(true)}>
               <Upload className="h-4 w-4 mr-2" />
-              Upload a source
+              Añade una fuente
             </Button>
           </div>
 
@@ -294,7 +294,7 @@ const ChatArea = ({
             <div className="flex space-x-4">
               <Input placeholder="Upload a source to get started" disabled className="flex-1" />
               <div className="flex items-center text-sm text-gray-500">
-                0 sources
+                0 fuentes
               </div>
               <Button disabled>
                 <Send className="h-4 w-4" />
