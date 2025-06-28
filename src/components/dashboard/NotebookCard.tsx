@@ -56,9 +56,9 @@ const NotebookCard = ({
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>Delete this notebook?</AlertDialogTitle>
+              <AlertDialogTitle>Deseas borrar este notebook?</AlertDialogTitle>
               <AlertDialogDescription>
-                You're about to delete this notebook and all of its content. This cannot be undone.
+                Estás a punto de eliminar este cuaderno y todo su contenido. Esto no se puede deshacer.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
