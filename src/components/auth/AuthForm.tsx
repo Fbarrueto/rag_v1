@@ -72,9 +72,9 @@ const AuthForm = () => {
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
-        <CardTitle>Sign In</CardTitle>
+        <CardTitle>Iniciar sesión</CardTitle>
         <CardDescription>
-          Enter your credentials to access your notebooks
+          Ingresa tu contraeña para acceder a tus notebooks
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -87,18 +87,18 @@ const AuthForm = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              placeholder="Enter your email"
+              placeholder="Ingresa tu Email"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password">Contraseña</Label>
             <Input
               id="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              placeholder="Enter your password"
+              placeholder="Ingresa tu contraseña"
               minLength={6}
             />
           </div>
