@@ -441,11 +441,11 @@ const AddSourcesDialog = ({
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 mb-2">
-                    {isProcessingFiles ? 'Processing files...' : 'Upload sources'}
+                    {isProcessingFiles ? 'Procesando Archivos...' : 'Carga Fuentes'}
                   </h3>
                   <p className="text-gray-600 text-sm">
                     {isProcessingFiles ? (
-                      'Please wait while we process your files'
+                      'Espera mientras se procesan tus archivos'
                     ) : (
                       <>
                         Arrastra y suelta o{' '}
