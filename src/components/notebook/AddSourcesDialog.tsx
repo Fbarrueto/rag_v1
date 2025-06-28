@@ -496,8 +496,8 @@ const AddSourcesDialog = ({
                 disabled={isProcessingFiles}
               >
                 <Copy className="h-6 w-6 text-purple-600" />
-                <span className="font-medium">Paste Text - Copied Text</span>
-                <span className="text-sm text-gray-500">Add copied content</span>
+                <span className="font-medium">Pegar texto - Texto copiado</span>
+                <span className="text-sm text-gray-500">Añade contenido copiado</span>
               </Button>
             </div>
           </div>
