@@ -59,7 +59,7 @@ const EmptyDashboard = () => {
 
       <Button onClick={handleCreateNotebook} size="lg" className="bg-blue-600 hover:bg-blue-700" disabled={isCreating}>
         <Upload className="h-5 w-5 mr-2" />
-        {isCreating ? 'Creating...' : 'Create notebook'}
+        {isCreating ? 'Creating...' : 'Crea un notebook'}
       </Button>
     </div>;
 };
