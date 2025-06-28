@@ -18,11 +18,11 @@ const Dashboard = () => {
         <DashboardHeader userEmail={user?.email} />
         <main className="max-w-7xl mx-auto px-6 py-8">
           <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">Welcome to InsightsLM</h1>
+            <h1 className="text-4xl font-medium text-gray-900 mb-2">Bienvenido a tu Asitente de IA </h1>
           </div>
           <div className="text-center py-16">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-            <p className="text-gray-600">Initializing...</p>
+            <p className="text-gray-600">Iniciando...</p>
           </div>
         </main>
       </div>
@@ -36,7 +36,7 @@ const Dashboard = () => {
         <DashboardHeader userEmail={user?.email} />
         <main className="max-w-7xl mx-auto px-6 py-8">
           <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">Welcome to InsightsLM</h1>
+            <h1 className="text-4xl font-medium text-gray-900 mb-2">Bienvenido a tu Asitente de IA</h1>
           </div>
           <div className="text-center py-16">
             <p className="text-red-600">Authentication error: {authError}</p>
@@ -59,11 +59,11 @@ const Dashboard = () => {
         <DashboardHeader userEmail={user?.email} />
         <main className="max-w-7xl mx-auto px-6 py-8">
           <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">Welcome to InsightsLM</h1>
+            <h1 className="text-4xl font-medium text-gray-900 mb-2">Bienvenido a tu Asitente de IA</h1>
           </div>
           <div className="text-center py-16">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading your notebooks...</p>
+            <p className="text-gray-600">Cargando tus  notebooks...</p>
           </div>
         </main>
       </div>
@@ -77,10 +77,10 @@ const Dashboard = () => {
         <DashboardHeader userEmail={user?.email} />
         <main className="max-w-7xl mx-auto px-6 py-8">
           <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">Welcome to InsightsLM</h1>
+            <h1 className="text-4xl font-medium text-gray-900 mb-2">Bienvenido a tu Asitente de IA</h1>
           </div>
           <div className="text-center py-16">
-            <p className="text-red-600">Error loading notebooks: {error}</p>
+            <p className="text-red-600">Error cargando los notebooks: {error}</p>
             <button 
               onClick={() => window.location.reload()} 
               className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
@@ -99,7 +99,7 @@ const Dashboard = () => {
       
       <main className="max-w-7xl mx-auto px-6 py-[60px]">
         <div className="mb-8">
-          <h1 className="font-medium text-gray-900 mb-2 text-5xl">Welcome to InsightsLM</h1>
+          <h1 className="font-medium text-gray-900 mb-2 text-5xl">Bienvenido a tu Asitente de IA</h1>
         </div>
 
         {hasNotebooks ? <NotebookGrid /> : <EmptyDashboard />}
