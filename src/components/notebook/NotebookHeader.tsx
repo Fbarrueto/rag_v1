@@ -104,7 +104,7 @@ const NotebookHeader = ({ title, notebookId }: NotebookHeaderProps) => {
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuItem onClick={logout} className="cursor-pointer">
                   <LogOut className="h-4 w-4 mr-2" />
-                  Sign Out
+                  Cerrar Sesion
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
