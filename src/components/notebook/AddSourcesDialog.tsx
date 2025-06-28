@@ -448,21 +448,21 @@ const AddSourcesDialog = ({
                       'Please wait while we process your files'
                     ) : (
                       <>
-                        Drag & drop or{' '}
+                        Arrastra y suelta o{' '}
                         <button 
                           className="text-blue-600 hover:underline" 
                           onClick={() => document.getElementById('file-upload')?.click()}
                           disabled={isProcessingFiles}
                         >
-                          choose file
+                          Elige un archivo
                         </button>{' '}
-                        to upload
+                        para cargar
                       </>
                     )}
                   </p>
                 </div>
                 <p className="text-xs text-gray-500">
-                  Supported file types: PDF, txt, Markdown, Audio (e.g. mp3)
+                  Tipos de archivo compatibles: PDF, txt, Markdown, Audio (por ejemplo, mp3)
                 </p>
                 <input
                   id="file-upload"
@@ -486,7 +486,7 @@ const AddSourcesDialog = ({
               >
                 <Link className="h-6 w-6 text-green-600" />
                 <span className="font-medium">Link - Website</span>
-                <span className="text-sm text-gray-500">Multiple URLs at once</span>
+                <span className="text-sm text-gray-500">Multiple URLs a la vez</span>
               </Button>
 
               <Button
