@@ -39,8 +39,8 @@ const AuthForm = () => {
       
       if (error) {
         console.error('Sign in error:', error);
-        if (error.message.includes('Invalid login credentials')) {
-          throw new Error('Invalid email or password. Please check your credentials and try again.');
+        if (error.message.includes('Credenciales de inicio de sesion invalidad')) {
+          throw new Error('Email y/o contraseña invalida porfavor intenta nuevamente');
         } else if (error.message.includes('Email not confirmed')) {
           throw new Error('Please check your email and click the confirmation link before signing in.');
         } else {
@@ -51,8 +51,8 @@ const AuthForm = () => {
       console.log('Sign in successful:', data.user?.email);
       
       toast({
-        title: "Welcome back!",
-        description: "You have successfully signed in.",
+        title: "Bienvenido!",
+        description: "Haz iniciado Sesion Exitosamente!",
       });
 
       // The AuthContext will handle the redirect automatically
