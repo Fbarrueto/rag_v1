@@ -1,5 +1,5 @@
 {
-  "name": "Import Insights LM Workflows",
+  "name": "Import",
   "nodes": [
     {
       "parameters": {
@@ -8,8 +8,7 @@
             {
               "id": "d0ee4497-e902-40c5-8938-811bb206f6c8",
               "name": "workflow-files",
-              "value": ="[\n    {\n      \"file_type\": \"extract-text\",\n      \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Extract_Text.json\"\n    },\n    {\n      \"file_type\": \"generate-notebook-details\",\n      \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Generate_Notebook_Details.json\"\n    },\n    {\n      \"file_type\": \"upsert-to-vector-store\",\n      \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Upsert_to_Vector_Store.json\"\n    },\n    {\n      \"file_type\": \"process-additional-sources\",\n      \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Process_Additional_Sources.json\"\n    },\n    {\n      \"file_type\": \"chat\",\n      \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Chat.json\"\n    },\n    {\n      \"file_type\": \"podcast-generation\",\n      \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Podcast_Generation.json\"\n    }\n  ]"
-,
+              "value": "=[\n  {\n    \"file_type\": \"extract-text\",\n    \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Extract_Text.json\"\n  },\n  {\n    \"file_type\": \"generate-notebook-details\",\n    \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Generate_Notebook_Details.json\"\n  },\n  {\n    \"file_type\": \"upsert-to-vector-store\",\n    \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Upsert_to_Vector_Store.json\"\n  },\n  {\n    \"file_type\": \"process-additional-sources\",\n    \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Process_Additional_Sources.json\"\n  },\n  {\n    \"file_type\": \"chat\",\n    \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Chat.json\"\n  },\n  {\n    \"file_type\": \"podcast-generation\",\n    \"file_url\": \"https://raw.githubusercontent.com/Fbarrueto/rag_v1/main/n8n/InsightsLM___Podcast_Generation.json\"\n  }\n]\n",
               "type": "array"
             }
           ]
@@ -19,10 +18,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        580,
-        420
+        -1200,
+        920
       ],
-      "id": "31fb1beb-56fb-49a4-8ba8-27f8f4f483c4",
+      "id": "37e97460-2962-4390-9836-037968be79a8",
       "name": "Workflow File URLs to Download"
     },
     {
@@ -33,10 +32,10 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        800,
-        420
+        -980,
+        920
       ],
-      "id": "ba2e710c-b319-4b58-a140-20f2a3261e0b",
+      "id": "aaf1ee67-fc02-4614-8425-26fcfee2acbd",
       "name": "Split Out"
     },
     {
@@ -46,10 +45,10 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        1020,
-        420
+        -760,
+        920
       ],
-      "id": "9b8a7fcc-56e6-412d-91a4-46b3f6ef1d46",
+      "id": "d4b86d21-ceb4-4e04-970e-276b5ccacf39",
       "name": "Loop Over Items"
     },
     {
@@ -60,10 +59,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        1300,
-        -40
+        -480,
+        460
       ],
-      "id": "abe4c5e2-1a42-4e71-b029-f84ef6de88cc",
+      "id": "b0c82c2a-c173-487a-8c99-d98b73653c5d",
       "name": "Download Workflow File"
     },
     {
@@ -73,10 +72,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1520,
-        -40
+        -260,
+        460
       ],
-      "id": "1d07aa31-e50c-4cf3-8eb1-2b481c6055f3",
+      "id": "6c57ba81-8123-4fd9-a47f-c5d36156fd80",
       "name": "Find and Replace"
     },
     {
@@ -161,10 +160,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2,
       "position": [
-        1740,
-        -61
+        -40,
+        440
       ],
-      "id": "38a4265e-e599-4337-980c-c28c4f602d2e",
+      "id": "625a3a73-17c3-446b-a83e-fe713d2dd629",
       "name": "Switch"
     },
     {
@@ -174,10 +173,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2020,
-        -280
+        240,
+        220
       ],
-      "id": "18834b8a-a4c1-455b-85b7-9cbb82a36fc0",
+      "id": "ad4cfed0-8899-4744-9eab-65a72f0b2796",
       "name": "Update Extract Text Workflow Reference"
     },
     {
@@ -187,10 +186,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2020,
-        -100
+        240,
+        400
       ],
-      "id": "a14076eb-e04f-4648-8a08-9d3e768c760a",
+      "id": "cefc355b-5490-4295-8d0d-12b033eed454",
       "name": "Update Vector Upsert Workflow Reference"
     },
     {
@@ -202,15 +201,15 @@
       "type": "n8n-nodes-base.n8n",
       "typeVersion": 1,
       "position": [
-        2460,
-        80
+        680,
+        580
       ],
-      "id": "4f4f5414-3537-447a-bdfb-343e44d8e563",
+      "id": "9ecc6a47-ff42-4771-9b38-787df99f10a6",
       "name": "n8n",
       "credentials": {
         "n8nApi": {
-          "id": "telF4gea0lgT56np",
-          "name": "n8n account"
+          "id": "aQDOzRtMtXB8lrAj",
+          "name": "n8n account 2"
         }
       }
     },
@@ -221,43 +220,43 @@
             {
               "id": "866c90b8-42da-4178-93ce-26665d38d5ee",
               "name": "Enter Supabase Project ID",
-              "value": "",
+              "value": "oqmaqpfskxrgetfikdls",
               "type": "string"
             },
             {
               "id": "0c78076e-6b86-4521-9f56-53bf537deb7d",
               "name": "Enter your n8n Supabase Credential ID",
-              "value": "",
+              "value": "XTEM9CZ4NwdXq3Gd",
               "type": "string"
             },
             {
               "id": "a08496dd-25cb-4905-81a5-15fe8bb73c87",
               "name": "Enter the n8n Custom Webhook Header Auth ID",
-              "value": "",
+              "value": "3vz05FJRndrq1PVf",
               "type": "string"
             },
             {
               "id": "8adb8fb6-9daf-4385-bfce-547e0b982a8e",
               "name": "Enter the n8n Postgres Credential ID",
-              "value": "",
+              "value": "CDRPs2D4n8Q09lXG",
               "type": "string"
             },
             {
               "id": "a78cb031-db06-4b0f-9edd-50d231ee068f",
               "name": "Enter the n8n Google Gemini (PaLM) Credential ID",
-              "value": "",
+              "value": "2hXhf7pwfWeurKYu",
               "type": "string"
             },
             {
               "id": "de05aeff-fa19-4da9-b37d-db62cf8c8b20",
               "name": "Enter the n8n OpenAI Credential ID",
-              "value": "",
+              "value": "G2CrQoCqAxPWIqPr",
               "type": "string"
             },
             {
               "id": "2ae2acd0-422f-4f37-bb94-70859c9e7f69",
               "name": "Enter your n8n Base URL (The part before the first single slash)",
-              "value": "",
+              "value": "https://fbarrueto.app.n8n.cloud",
               "type": "string"
             }
           ]
@@ -267,10 +266,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        60,
-        420
+        -1720,
+        920
       ],
-      "id": "20bd3864-a6fd-49f3-a66e-9b4df0efadcd",
+      "id": "56f924e0-6f67-4287-8deb-6367b4598973",
       "name": "Enter User Values"
     },
     {
@@ -278,10 +277,10 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -180,
-        420
+        -1960,
+        920
       ],
-      "id": "16d38df6-a164-4a33-9237-43a36a6da4c7",
+      "id": "beaccd4f-da13-408a-886b-336dc6bc749c",
       "name": "When clicking ‘Execute workflow’"
     },
     {
@@ -294,10 +293,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -20,
-        280
+        -1800,
+        780
       ],
-      "id": "d68ad448-851e-48b1-a885-93b91dad58b0",
+      "id": "da086a5b-376d-4af3-80ea-5c4b576d09ba",
       "name": "Sticky Note"
     },
     {
@@ -310,10 +309,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2320,
-        -140
+        540,
+        360
       ],
-      "id": "60d5a9eb-d113-4280-b4a9-33648e5897f5",
+      "id": "02674bbe-abaa-4781-bc9e-b31a8a912ead",
       "name": "Sticky Note1"
     },
     {
@@ -404,10 +403,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        280,
-        420
+        -1500,
+        920
       ],
-      "id": "36a61d27-9537-4df3-ba67-b85d11c56136",
+      "id": "3358af80-5eba-4df9-9341-917cf9fc66e9",
       "name": "Checking Values are Set"
     },
     {
@@ -417,26 +416,11 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1380,
-        480
+        -400,
+        980
       ],
-      "id": "fe36dfff-d3f5-4b42-832c-0dd6a0a83718",
+      "id": "a2015ce0-7e56-4261-8c2e-c1ef2d0a4cc8",
       "name": "Read This After Executing Workflow"
-    },
-    {
-      "parameters": {
-        "content": "# Import Insights LM Workflows\n- Only run this workflow once to avoid having duplicate workflows in your project.\n- If you do create duplicate workflows, you can archive them in your instance",
-        "width": 680,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        220,
-        -340
-      ],
-      "id": "90c1b637-8da6-46f9-9560-f5dc04c01808",
-      "name": "Sticky Note2"
     },
     {
       "parameters": {
@@ -448,26 +432,11 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1280,
-        320
+        -500,
+        820
       ],
-      "id": "3f459a8d-b55c-4851-9b56-cd5911310f76",
+      "id": "94a0b6a6-9124-4ae7-8cf1-5362694c7816",
       "name": "Sticky Note3"
-    },
-    {
-      "parameters": {
-        "content": "RagVIVA",
-        "width": 340,
-        "color": 7
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -160,
-        -340
-      ],
-      "id": "128358e2-08f0-45e5-a071-c5c2918dea88",
-      "name": "Sticky Note8"
     }
   ],
   "pinData": {},
@@ -637,18 +606,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "67ee3da4-f5a8-49f6-bdfd-fde3da9d1698",
+  "versionId": "e13e07a2-3f6e-45ae-9f97-ccc9a0553165",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b5d1ea132a4e071e6288b3143f31284b91560858bdef3f0c88a49f587fc91a29"
+    "instanceId": "09c72f48a51f8cfcd75e054916d45b638a84469fe864675cddb58d471dd87408"
   },
-  "id": "ihfgsYrKHHNlCChl",
-  "tags": [
-    {
-      "createdAt": "2025-05-12T13:43:59.783Z",
-      "updatedAt": "2025-05-12T13:43:59.783Z",
-      "id": "d3ygIhrGjDmzgrW0",
-      "name": "TheAIAutomators.com"
-    }
-  ]
+  "id": "8vAoJnA00DFGxzuG",
+  "tags": []
 }
