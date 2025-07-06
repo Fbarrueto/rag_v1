@@ -220,43 +220,43 @@
             {
               "id": "866c90b8-42da-4178-93ce-26665d38d5ee",
               "name": "Enter Supabase Project ID",
-              "value": "oqmaqpfskxrgetfikdls",
+              "value": "",
               "type": "string"
             },
             {
               "id": "0c78076e-6b86-4521-9f56-53bf537deb7d",
               "name": "Enter your n8n Supabase Credential ID",
-              "value": "XTEM9CZ4NwdXq3Gd",
+              "value": "",
               "type": "string"
             },
             {
               "id": "a08496dd-25cb-4905-81a5-15fe8bb73c87",
               "name": "Enter the n8n Custom Webhook Header Auth ID",
-              "value": "3vz05FJRndrq1PVf",
+              "value": "",
               "type": "string"
             },
             {
               "id": "8adb8fb6-9daf-4385-bfce-547e0b982a8e",
               "name": "Enter the n8n Postgres Credential ID",
-              "value": "CDRPs2D4n8Q09lXG",
+              "value": "",
               "type": "string"
             },
             {
               "id": "a78cb031-db06-4b0f-9edd-50d231ee068f",
               "name": "Enter the n8n Google Gemini (PaLM) Credential ID",
-              "value": "2hXhf7pwfWeurKYu",
+              "value": "",
               "type": "string"
             },
             {
               "id": "de05aeff-fa19-4da9-b37d-db62cf8c8b20",
               "name": "Enter the n8n OpenAI Credential ID",
-              "value": "G2CrQoCqAxPWIqPr",
+              "value": "",
               "type": "string"
             },
             {
               "id": "2ae2acd0-422f-4f37-bb94-70859c9e7f69",
               "name": "Enter your n8n Base URL (The part before the first single slash)",
-              "value": "https://fbarrueto.app.n8n.cloud",
+              "value": "",
               "type": "string"
             }
           ]
