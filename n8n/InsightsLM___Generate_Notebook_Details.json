@@ -1,5 +1,5 @@
 {
-  "name": "InsightsLM - Generate Notebook Details",
+  "name": "Generate Notebook Details",
   "nodes": [
     {
       "parameters": {
@@ -20,8 +20,8 @@
       "webhookId": "0c488f50-8d6a-48a0-b056-5f7cfca9efe2",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "39evQ95L86jhtb3I",
-          "name": "MyNoteBookLM Auth"
+          "id": "3vz05FJRndrq1PVf",
+          "name": "Header Auth account"
         }
       }
     },
@@ -93,7 +93,7 @@
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "hNalDChhNUDtYG7T",
+          "id": "G2CrQoCqAxPWIqPr",
           "name": "OpenAi account"
         }
       }
@@ -102,7 +102,7 @@
       "parameters": {
         "workflowId": {
           "__rl": true,
-          "value": "AzZ5a2zCGU1O3MRV",
+          "value": "lJ2FLA7dcKWDZYbx",
           "mode": "list",
           "cachedResultName": "InsightsLM - Extract Text"
         },
@@ -301,22 +301,6 @@
       ],
       "id": "2011755c-70ad-4bd7-811b-e6bface53763",
       "name": "Sticky Note"
-    },
-    {
-      "parameters": {
-        "content": "[![The AI Automators](https://www.theaiautomators.com/wp-content/uploads/2025/03/gray-logo.png)](https://www.theaiautomators.com/)\n## InsightsLM\nhttps://github.com/theaiautomators/insights-lm-public",
-        "height": 220,
-        "width": 280,
-        "color": 7
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        140,
-        -580
-      ],
-      "id": "b0e56210-db45-4b10-b513-ddbac2e7d222",
-      "name": "Sticky Note8"
     }
   ],
   "pinData": {},
@@ -450,18 +434,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "dd220d9f-8dc3-44bc-889d-726cde238df3",
+  "versionId": "18508499-03b5-48d7-9f8f-56e25bb4e68f",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b5d1ea132a4e071e6288b3143f31284b91560858bdef3f0c88a49f587fc91a29"
+    "instanceId": "09c72f48a51f8cfcd75e054916d45b638a84469fe864675cddb58d471dd87408"
   },
-  "id": "5I6KohfDxYQ2xvQ7",
-  "tags": [
-    {
-      "createdAt": "2025-05-12T13:43:59.783Z",
-      "updatedAt": "2025-05-12T13:43:59.783Z",
-      "id": "d3ygIhrGjDmzgrW0",
-      "name": "TheAIAutomators.com"
-    }
-  ]
+  "id": "kStFgekIzcGtm5fR",
+  "tags": []
 }
