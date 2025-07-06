@@ -1,10 +1,8 @@
 {
-  "name": "InsightsLM - Podcast Generation",
+  "name": "Podcast Generation",
   "nodes": [
     {
-      "parameters": {
-        "command": "if ffmpeg -version > /dev/null 2>&1; then\n  echo \"FFmpeg is installed\"\nelse\n  echo \"FFmpeg is NOT installed\"\nfi\n"
-      },
+      "parameters": {},
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
       "position": [
@@ -125,8 +123,8 @@
       "webhookId": "4c4699bc-004b-4ca3-8923-373ddd4a274e",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "39evQ95L86jhtb3I",
-          "name": "MyNoteBookLM Auth"
+          "id": "3vz05FJRndrq1PVf",
+          "name": "Header Auth account"
         }
       }
     },
@@ -155,8 +153,8 @@
       "name": "Get Sources",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -237,7 +235,7 @@
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "hNalDChhNUDtYG7T",
+          "id": "G2CrQoCqAxPWIqPr",
           "name": "OpenAi account"
         }
       }
@@ -266,7 +264,7 @@
       "maxTries": 5,
       "credentials": {
         "googlePalmApi": {
-          "id": "PzC8XiX0nzmyH9AA",
+          "id": "2hXhf7pwfWeurKYu",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -305,9 +303,7 @@
       "name": "Read/Write Files from Disk"
     },
     {
-      "parameters": {
-        "command": "=ffmpeg -f s16le -ar 24000 -ac 1 -i /tmp/{{ $('Generate Audio').item.json.responseId }}-in.pcm -codec:a libmp3lame -qscale:a 2 /tmp/{{ $('Generate Audio').item.json.responseId }}-out.mp3"
-      },
+      "parameters": {},
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
       "position": [
@@ -334,7 +330,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://yfvmutoxmibqzvyklggr.supabase.co/storage/v1/object/audio/{{ $('Webhook').item.json.body.notebook_id}}/{{ $binary.data.fileName }}",
+        "url": "=https://oqmaqpfskxrgetfikdls.supabase.co/storage/v1/object/audio/{{ $('Webhook').item.json.body.notebook_id}}/{{ $binary.data.fileName }}",
         "authentication": "predefinedCredentialType",
         "nodeCredentialType": "supabaseApi",
         "sendBody": true,
@@ -366,15 +362,15 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://yfvmutoxmibqzvyklggr.supabase.co/storage/v1/object/sign/{{ $json.body.Key }}",
+        "url": "=https://oqmaqpfskxrgetfikdls.supabase.co/storage/v1/object/sign/{{ $json.body.Key }}",
         "authentication": "predefinedCredentialType",
         "nodeCredentialType": "supabaseApi",
         "sendBody": true,
@@ -392,8 +388,8 @@
       "name": "Generate Signed URL",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -427,7 +423,7 @@
           "fieldValues": [
             {
               "fieldId": "audio_overview_url",
-              "fieldValue": "=https://yfvmutoxmibqzvyklggr.supabase.co/storage/v1/{{ $json.signedURL }}"
+              "fieldValue": "=https://oqmaqpfskxrgetfikdls.supabase.co/storage/v1/{{ $json.signedURL }}"
             },
             {
               "fieldId": "audio_url_expires_at",
@@ -450,26 +446,10 @@
       "name": "Supabase",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
-    },
-    {
-      "parameters": {
-        "content": "[![The AI Automators](https://www.theaiautomators.com/wp-content/uploads/2025/03/gray-logo.png)](https://www.theaiautomators.com/)\n## InsightsLM\nhttps://github.com/theaiautomators/insights-lm-public",
-        "height": 220,
-        "width": 280,
-        "color": 7
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -680,
-        900
-      ],
-      "id": "f1d8ead0-76e7-4a47-8399-969861b08a46",
-      "name": "Sticky Note8"
     }
   ],
   "pinData": {},
@@ -669,22 +649,14 @@
       ]
     }
   },
-  "active": true,
+  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "f228bda4-191c-47b3-a8b0-e8e16d374eb5",
+  "versionId": "1e7bc95f-af90-42e0-965d-8b25bd555a8e",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b5d1ea132a4e071e6288b3143f31284b91560858bdef3f0c88a49f587fc91a29"
+    "instanceId": "09c72f48a51f8cfcd75e054916d45b638a84469fe864675cddb58d471dd87408"
   },
-  "id": "bxrCsRKl157B5Lyt",
-  "tags": [
-    {
-      "createdAt": "2025-05-12T13:43:59.783Z",
-      "updatedAt": "2025-05-12T13:43:59.783Z",
-      "id": "d3ygIhrGjDmzgrW0",
-      "name": "TheAIAutomators.com"
-    }
-  ]
+  "id": "FBzFMgBzs8qrDoJU",
+  "tags": []
 }
