@@ -1,5 +1,5 @@
 {
-  "name": "InsightsLM - Extract Text",
+  "name": "Extract Text",
   "nodes": [
     {
       "parameters": {
@@ -23,7 +23,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://yfvmutoxmibqzvyklggr.supabase.co/storage/v1/object/sign/sources/{{ $json.filePath }}",
+        "url": "=https://oqmaqpfskxrgetfikdls.supabase.co/storage/v1/object/sign/sources/{{ $json.filePath }}",
         "authentication": "predefinedCredentialType",
         "nodeCredentialType": "supabaseApi",
         "sendBody": true,
@@ -41,14 +41,14 @@
       "name": "Generate Signed URL",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
     {
       "parameters": {
-        "url": "=https://yfvmutoxmibqzvyklggr.supabase.co/storage/v1/{{ $json.signedURL }}",
+        "url": "=https://oqmaqpfskxrgetfikdls.supabase.co/storage/v1/{{ $json.signedURL }}",
         "options": {
           "response": {
             "response": {
@@ -181,7 +181,7 @@
       "name": "OpenAI",
       "credentials": {
         "openAiApi": {
-          "id": "hNalDChhNUDtYG7T",
+          "id": "G2CrQoCqAxPWIqPr",
           "name": "OpenAi account"
         }
       }
@@ -246,22 +246,6 @@
       ],
       "id": "a550ac25-8226-46af-8c55-5f42f1abd0e9",
       "name": "Sticky Note"
-    },
-    {
-      "parameters": {
-        "content": "[![The AI Automators](https://www.theaiautomators.com/wp-content/uploads/2025/03/gray-logo.png)](https://www.theaiautomators.com/)\n## InsightsLM\nhttps://github.com/theaiautomators/insights-lm-public",
-        "height": 220,
-        "width": 280,
-        "color": 7
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        60,
-        -200
-      ],
-      "id": "3f1e49b6-b7b4-49d0-a2e7-c50ab1cd8f3d",
-      "name": "Sticky Note8"
     }
   ],
   "pinData": {},
@@ -362,10 +346,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "28c069b3-6e86-4169-82b3-50bcfad834f7",
+  "versionId": "133dac4c-674c-4628-8405-3638763d15f1",
   "meta": {
-    "instanceId": "b5d1ea132a4e071e6288b3143f31284b91560858bdef3f0c88a49f587fc91a29"
+    "instanceId": "09c72f48a51f8cfcd75e054916d45b638a84469fe864675cddb58d471dd87408"
   },
-  "id": "AzZ5a2zCGU1O3MRV",
+  "id": "lJ2FLA7dcKWDZYbx",
   "tags": []
 }
