@@ -1,5 +1,5 @@
 {
-  "name": "InsightsLM - Process Additional Sources",
+  "name": "Process Additional Sources",
   "nodes": [
     {
       "parameters": {
@@ -19,8 +19,8 @@
       "webhookId": "670882ea-5c1e-4b50-9f41-4792256af985",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "39evQ95L86jhtb3I",
-          "name": "MyNoteBookLM Auth"
+          "id": "3vz05FJRndrq1PVf",
+          "name": "Header Auth account"
         }
       }
     },
@@ -28,7 +28,7 @@
       "parameters": {
         "workflowId": {
           "__rl": true,
-          "value": "IQcdcedwXg2w3AuW",
+          "value": "gy8UtjFSxfuSbAbw",
           "mode": "list",
           "cachedResultName": "InsightsLM - Upsert to Vector Store"
         },
@@ -204,7 +204,7 @@
       "parameters": {
         "workflowId": {
           "__rl": true,
-          "value": "IQcdcedwXg2w3AuW",
+          "value": "gy8UtjFSxfuSbAbw",
           "mode": "list",
           "cachedResultName": "InsightsLM - Upsert to Vector Store"
         },
@@ -306,8 +306,8 @@
       "name": "Supabase",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -328,7 +328,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://yfvmutoxmibqzvyklggr.supabase.co/storage/v1/object/sources/{{ $('Switch').item.json.body.notebookId }}/{{ $('Switch').item.json.body.sourceIds[$('Loop Over Items').item.pairedItem.item] }}.txt",
+        "url": "=https://oqmaqpfskxrgetfikdls.supabase.co/storage/v1/object/sources/{{ $('Switch').item.json.body.notebookId }}/{{ $('Switch').item.json.body.sourceIds[$('Loop Over Items').item.pairedItem.item] }}.txt",
         "authentication": "predefinedCredentialType",
         "nodeCredentialType": "supabaseApi",
         "sendBody": true,
@@ -347,15 +347,15 @@
       "name": "Upload File to Bucket",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://yfvmutoxmibqzvyklggr.supabase.co/storage/v1/object/sources/{{ $('Switch').item.json.body.notebookId }}/{{ $json.body.sourceId }}.txt",
+        "url": "=https://oqmaqpfskxrgetfikdls.supabase.co/storage/v1/object/sources/{{ $('Switch').item.json.body.notebookId }}/{{ $json.body.sourceId }}.txt",
         "authentication": "predefinedCredentialType",
         "nodeCredentialType": "supabaseApi",
         "sendBody": true,
@@ -374,8 +374,8 @@
       "name": "Upload File to Bucket1",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -415,8 +415,8 @@
       "name": "Supabase1",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -434,22 +434,6 @@
       ],
       "id": "e0772715-ac1a-4ceb-8017-b07e568c2251",
       "name": "Sticky Note"
-    },
-    {
-      "parameters": {
-        "content": "[![The AI Automators](https://www.theaiautomators.com/wp-content/uploads/2025/03/gray-logo.png)](https://www.theaiautomators.com/)\n## InsightsLM\nhttps://github.com/theaiautomators/insights-lm-public",
-        "height": 220,
-        "width": 280,
-        "color": 7
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        0,
-        -600
-      ],
-      "id": "3cb7b6af-1480-47dc-aa7b-07be3b2eb433",
-      "name": "Sticky Note8"
     }
   ],
   "pinData": {},
@@ -588,18 +572,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "543da2bf-a142-4b01-bffc-81c36407da2f",
+  "versionId": "73905684-2c38-4806-ba6c-8cdbebf0eea6",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b5d1ea132a4e071e6288b3143f31284b91560858bdef3f0c88a49f587fc91a29"
+    "instanceId": "09c72f48a51f8cfcd75e054916d45b638a84469fe864675cddb58d471dd87408"
   },
-  "id": "3FuYqT7cPNPitvak",
-  "tags": [
-    {
-      "createdAt": "2025-05-12T13:43:59.783Z",
-      "updatedAt": "2025-05-12T13:43:59.783Z",
-      "id": "d3ygIhrGjDmzgrW0",
-      "name": "TheAIAutomators.com"
-    }
-  ]
+  "id": "Xm4gXlPcdUrm0LqN",
+  "tags": []
 }
