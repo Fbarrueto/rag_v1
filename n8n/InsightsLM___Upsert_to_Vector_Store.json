@@ -1,5 +1,5 @@
 {
-  "name": "InsightsLM - Upsert to Vector Store",
+  "name": "Upsert to Vector Store",
   "nodes": [
     {
       "parameters": {
@@ -19,8 +19,8 @@
       "webhookId": "19566c6c-e0a5-4a8f-ba1a-5203c2b663b7",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "39evQ95L86jhtb3I",
-          "name": "MyNoteBookLM Auth"
+          "id": "3vz05FJRndrq1PVf",
+          "name": "Header Auth account"
         }
       }
     },
@@ -49,8 +49,8 @@
       "alwaysOutputData": true,
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -108,7 +108,7 @@
       "name": "Embeddings OpenAI",
       "credentials": {
         "openAiApi": {
-          "id": "hNalDChhNUDtYG7T",
+          "id": "G2CrQoCqAxPWIqPr",
           "name": "OpenAi account"
         }
       }
@@ -152,7 +152,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://yfvmutoxmibqzvyklggr.supabase.co/functions/v1/process-document-callback",
+        "url": "https://oqmaqpfskxrgetfikdls.supabase.co/functions/v1/process-document-callback",
         "authentication": "predefinedCredentialType",
         "nodeCredentialType": "supabaseApi",
         "sendBody": true,
@@ -174,8 +174,8 @@
       "name": "HTTP Request",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -234,7 +234,7 @@
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "hNalDChhNUDtYG7T",
+          "id": "G2CrQoCqAxPWIqPr",
           "name": "OpenAi account"
         }
       }
@@ -279,8 +279,8 @@
       "name": "Supabase",
       "credentials": {
         "supabaseApi": {
-          "id": "OeYUddl4OaIohMCC",
-          "name": "MynotebookLM Supabase"
+          "id": "XTEM9CZ4NwdXq3Gd",
+          "name": "Supabase account"
         }
       }
     },
@@ -288,7 +288,7 @@
       "parameters": {
         "workflowId": {
           "__rl": true,
-          "value": "AzZ5a2zCGU1O3MRV",
+          "value": "lJ2FLA7dcKWDZYbx",
           "mode": "list",
           "cachedResultName": "InsightsLM - Extract Text"
         },
@@ -379,22 +379,6 @@
       ],
       "id": "8c087d38-88b2-4c9f-8267-d8121addea2a",
       "name": "Sticky Note"
-    },
-    {
-      "parameters": {
-        "content": "[![The AI Automators](https://www.theaiautomators.com/wp-content/uploads/2025/03/gray-logo.png)](https://www.theaiautomators.com/)\n## InsightsLM\nhttps://github.com/theaiautomators/insights-lm-public",
-        "height": 220,
-        "width": 280,
-        "color": 7
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        740,
-        -340
-      ],
-      "id": "6d8672e9-000b-4e81-9f2b-a665f2972e52",
-      "name": "Sticky Note8"
     }
   ],
   "pinData": {},
@@ -558,18 +542,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "5bb6ec60-c693-47cc-9d5a-a27d71bf284f",
+  "versionId": "72dad106-0342-4df9-b336-65bd60104d84",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b5d1ea132a4e071e6288b3143f31284b91560858bdef3f0c88a49f587fc91a29"
+    "instanceId": "09c72f48a51f8cfcd75e054916d45b638a84469fe864675cddb58d471dd87408"
   },
-  "id": "IQcdcedwXg2w3AuW",
-  "tags": [
-    {
-      "createdAt": "2025-05-12T13:43:59.783Z",
-      "updatedAt": "2025-05-12T13:43:59.783Z",
-      "id": "d3ygIhrGjDmzgrW0",
-      "name": "TheAIAutomators.com"
-    }
-  ]
+  "id": "gy8UtjFSxfuSbAbw",
+  "tags": []
 }
