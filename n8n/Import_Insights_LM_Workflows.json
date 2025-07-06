@@ -425,7 +425,7 @@
     },
     {
       "parameters": {
-        "content": "# Import Insights LM Workflows\n- Only run this workflow once to avoid having duplicate workflows in your project.\n- If you do create duplicate workflows, you can archive them in your instance\n- https://github.com/theaiautomators/insights-lm-public",
+        "content": "# Import Insights LM Workflows\n- Only run this workflow once to avoid having duplicate workflows in your project.\n- If you do create duplicate workflows, you can archive them in your instance",
         "width": 680,
         "color": 6
       },
@@ -456,7 +456,7 @@
     },
     {
       "parameters": {
-        "content": "[![The AI Automators](https://www.theaiautomators.com/wp-content/uploads/2025/03/gray-logo.png)](https://www.theaiautomators.com/)",
+        "content": "RagVIVA",
         "width": 340,
         "color": 7
       },
