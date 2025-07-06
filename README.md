@@ -52,6 +52,93 @@ Luego, sigue los pasos detallados en la guía `GETTING_STARTED.md` dentro del re
 
 ---
 
+
+# Comenzando: Guía para No-Coders para Probar y Personalizar
+
+Esta guía proporciona la forma más rápida de poner en marcha **RAGVIVA** para que puedas probar, personalizar y experimentar.
+
+Te recomiendo seguir el video a partir del minuto 17:53 para una guía paso a paso completa:  
+🔗 [Ver video](https://youtu.be/IXJEGjfZRBE?t=1073)
+
+> ⚠️ Necesitarás tener un archivo de notas (notepad) abierto para copiar y pegar distintas credenciales y detalles.
+
+---
+
+## 1. Crear cuenta y proyecto en Supabase
+
+1. Ve a [Supabase.com](https://supabase.com) y crea una cuenta gratuita.
+2. Crea un nuevo proyecto.
+3. Copia la contraseña de la base de datos y pégala en tu archivo de notas, ya que la necesitarás más adelante.
+
+---
+
+## 2. Crear cuenta de GitHub y repositorio desde la plantilla
+
+1. Si no tienes una, crea una cuenta gratuita en [GitHub.com](https://github.com).
+2. Navega al repositorio plantilla de InsightsLM:  
+   🔗 [https://github.com/Fbarrueto/rag_v1/tree/main](https://github.com/Fbarrueto/rag_v1/tree/main)
+3. Haz clic en el botón **"Use this template"** para crear una copia del repositorio en tu cuenta.
+4. Completa el formulario para crear el nuevo repositorio.
+
+---
+
+## 3. Importar en un editor de IA (Bolt.new)
+
+1. Crea una cuenta en [Bolt.new](https://bolt.new), ya que tiene integración con Supabase.  
+   _(El proyecto fue creado inicialmente en Loveable, pero actualmente es más difícil importar proyectos existentes de GitHub allí)_
+2. Importa tu repositorio de GitHub recién creado en tu proyecto de Bolt.
+   - Tendrás que vincular tu cuenta de GitHub con Bolt.
+   - Selecciona el repositorio y haz la importación.
+3. Haz clic en la pestaña **"Integrations"** y conecta tu proyecto de Supabase.
+   - Tendrás que vincular tu cuenta de Supabase con Bolt.
+4. Una vez conectado, las **Edge Functions** de Supabase se desplegarán automáticamente.
+   - Tendrás que aprobar la ejecución del **script de migración** para crear las estructuras de datos en Supabase.
+
+---
+
+## 4. Importar y configurar los flujos de trabajo N8N
+
+La carpeta `/n8n` de este repositorio contiene los archivos JSON necesarios para los flujos de trabajo en **n8n**. Existen dos enfoques:
+
+### Opción 1: Usar el importador de flujos
+- Importa el archivo `Import_Insights_LM_Workflows.json` en un nuevo flujo en n8n.
+- Sigue los pasos del video.
+- Configura la **API key de n8n**, que se usará para crear automáticamente todos los flujos necesarios.
+- También deberás configurar diversas credenciales.
+
+### Opción 2: Importar manualmente cada flujo
+- Descarga e importa los 6 archivos JSON de la carpeta `/n8n`.
+- Configura nodo por nodo los servicios requeridos:
+  - Supabase
+  - OpenAI
+  - Gemini
+  - Sub-flujos
+  - Etc.
+- Sigue los **TODOs** dentro de cada flujo.
+
+---
+
+## 5. Agregar Webhooks de N8N a los Secrets de Supabase
+
+Los flujos de trabajo de N8N se activan mediante **webhooks** desde las **Edge Functions** de Supabase.
+
+- Si usaste el importador de flujos, tendrás la lista completa de secretos para crear.
+- Si no, deberás obtenerlos desde los distintos flujos.
+
+### En el panel de tu proyecto Supabase:
+1. Navega a: `Edge Functions -> Secrets`
+2. Agrega los siguientes secretos (con sus respectivos valores):
+
+```text
+NOTEBOOK_CHAT_URL  
+NOTEBOOK_GENERATION_URL  
+AUDIO_GENERATION_WEBHOOK_URL  
+DOCUMENT_PROCESSING_WEBHOOK_URL  
+ADDITIONAL_SOURCES_WEBHOOK_URL  
+NOTEBOOK_GENERATION_AUTH (contraseña de autenticación por header personalizada para los webhooks de n8n)  
+OPENAI_API_KEY (usada en la función “Generate Note Title”)
+
+
 ## Licencia
 
 Este proyecto se distribuye bajo la licencia MIT.
